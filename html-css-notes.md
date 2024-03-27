@@ -1,4 +1,6 @@
-# Creating Headings
+# HTML and CSS Notes
+
+## Creating Headings
 
 We can create headings using h1 to h6 elements. We should only have one h1 element on a page as this specifies the main idea for the page.
 
@@ -16,7 +18,7 @@ We should not be using an h3 element if we do not have h2 elements.
 <h3>Herbivores</h3>
 ```
 
-# Creating Paragraphs
+## Creating Paragraphs
 
 We can use the p element to create paragraphs. Each paragraph needs to be inside its own p element.
 
@@ -29,7 +31,7 @@ We can use the p element to create paragraphs. Each paragraph needs to be inside
 </p>
 ```
 
-# Document Structure
+## Document Structure
 
 We need to start with a doctype declaration which is !DOCTYPE html
 
@@ -49,7 +51,7 @@ Inside the html tags we need a head and a body. We put meta data in the head - i
 </html>
 ```
 
-# Comments
+## Comments
 
 Comments let the browser know that the text inside them should be ignored - we can therefore put human languages such as English in the comment.
 
@@ -59,39 +61,39 @@ We can use comments to leave notes for ourselves or other developers. Comments c
 <!-- this is a comment - it will be ignored by the browser -->
 ```
 
-# forms
+## Forms
 
-## form controls
+### Form Controls
 
 Form controls go inside form elements. The input and button elements are examples of form controls. Form controls let users input data to the form.
 
-### input
+#### input
 
 The input element has the type attribute which must be there. The type attribute specifies what type of data the input element expects - we can use values such as "text" and "number".
 
 The input element is inline.
 
-### button
+#### button
 
 The button element has an open and close tag so we can put text to display on the button inbetween them. The type attribute can be values such as "submit" which will send the data. We do not have to have the type attribute with button elements.
 
 The button element is an inline element.
 
-## the form element
+### Form Element
 
 The form element contains the form control elements. Its main purpose is to group together the form controls and it also specifies to the browser where the data from the form controls should be sent once it is submitted. This is specified in the action attribute. There is also a method attribute which specifies the http verb to use such as get or post.
 
-## name and placeholder attributes
+### Name and Placeholder Attributes
 
-### name
+#### Name
 
 The name attribute is used on input elements. It is used so when a backend script receives the submitted data it knows what to do with it. An example would be to give an input element the name of username and another input element in the same form the name of password. This means that the name attribute on an input element is very important and should always be used.
 
-### placeholder
+#### Placeholder
 
 The placeholder attribute just places text in an input field to help users know what should go into it. The text will disappear as soon as a user starts to type into the field.
 
-## labelling form controls
+### Labelling Form Controls
 
 The label element is used to connect to an input field. We can put text into the label element which specifies what type of data needs to be inputted to the field it is associated with.
 
@@ -101,31 +103,31 @@ Label elements are used by screen readers to help people with visual impairments
 
 Each label connects to one input field. We should use them always even if we are using placeholder text.
 
-## required
+### required
 
 The required attribute is added to make user that users fill out the field it is attached to before the form data is submitted.
 
-## textareas
+### textareas
 
 The textarea element lets us specify a number of rows and columns (cols) as attributes so that users can type more text into the field.
 
 The text which we place inside the textarea tags will be seen as starter text when rendered by a browser.
 
-## range
+### range
 
 This is a value we can give to a type attribute in an input element. We can specify a min and max value as different attributes on the same input element. This will let users slide along a range. We can use the step attribute to determine the increments and decrements.
 
-## checkbox
+### checkbox
 
 This is a value which we can put into the type attribute on an input element. A checkbox can be ticked and will definitely need to be labelled so users know what it refers to. It will be given the value of on if it is ticked when it is submitted. There will be no value if it is not ticked.
 
-## select
+### select
 
 We use a select element and inside it we need to place option elements which include opening and closing tags. The name and id attributes go onto the select element. The option element must have a value attribute set. The value attribute contains the data which will actually be sent to a backend script if the option has been chosen.
 
 An example of this would be a select element which is named shirtsize with option elements which have values such as small medium and large. The data will be sent to the backend with shirtsize given the value of whatever was chosen such as shirtsize=m
 
-## radio button
+### radio button
 
 We can create a radio button by setting the value of the type attribute on an input element to be radio
 
@@ -135,7 +137,7 @@ We need to give a radio button a value attribute. The value given to this attrib
 
 An example of radio buttons would be a contact method part of a form in which each one has the name of contact and then unique values such as phone and email. The server will then receive data such as contact=email
 
-# Anatomy of CSS
+## Anatomy of CSS
 
 We first of all select something and then specify its properties using property: value pairs which are terminated with ; and are wrapped inside {}
 
@@ -151,7 +153,7 @@ Inside the {} we have
 
 property: value;
 
-# The Element Selector
+## Element Selector
 
 The element selector selects all the elements of the specified type and styles them as we specify. The tag is used so if we wanted to select all of the anchor elements we would use the a tag.
 
@@ -161,17 +163,17 @@ a {
 }
 ```
 
-# CSS Colors
+## CSS Colors
 
 The color property is for text color whereas the background-color property is for the background color of the selected element.
 
 If the element is block level then the background color will stretch across the entire screen but this will not occur if the element is inline.
 
-## Named Colors
+### Named Colors
 
 We can use these colors for ease. Code editors also allow us to use a color selcetion pallette.
 
-## RGB Colors
+### RGB Colors
 
 We can use Red, Green and Blue color channel values to specify how much of each color to use. The range is from 0 (none) to 255 (full). An example of blue is given below.
 
@@ -181,7 +183,7 @@ p {
 }
 ```
 
-## Hexadecimal Colors
+### Hexadecimal Colors
 
 We specify these using hexadecimal notation. These will go from 00 for none to FF for full (still 0 to 255). The below example gives blue. Note that # is used to specify we are going to use hexadecimal notation.
 
@@ -203,7 +205,7 @@ a {
 }
 ```
 
-## RGBA Colors (Opacity)
+### RGBA Colors (Opacity)
 
 We can add an Alpha channel at the end to specify opacity from 0 (transparent) to 1 (fully opaque).
 
@@ -223,7 +225,7 @@ h1 {
 }
 ```
 
-# CSS Inheritance
+## CSS Inheritance
 
 Some properties in CSS, such as color, are inherited by elements from their parents (elements which they are embedded in).
 
@@ -239,11 +241,11 @@ p {
 
 In the above example, all paragraph elements will inherit the border of their parent element if they have one.
 
-# Styling Text
+## Styling Text
 
 There are lots of properties to do with styling text as text is used so much on websites.
 
-## Changing Fonts with Font-Family
+### Changing Fonts with Font-Family
 
 Fonts are installed on machines so just because we specify one to use this does not mean that it will be used. One way to get around this problem is to use a font stack in which we specify a list of fonts we would like to have used and then a default font family such as serif or sans-serif just incase the machine does not have any of our specified fonts installed.
 
@@ -255,7 +257,7 @@ h1 {
 }
 ```
 
-## Font-Size Font-Weight and Font-Style
+### Font-Size Font-Weight and Font-Style
 
 There are lots of units to measure the size of fonts. The most simple is pixels which is written as px
 
@@ -291,7 +293,7 @@ p {
 }
 ```
 
-## Text Alignment
+### Text Alignment
 
 We can use text-align to align the text in its element. This property is inherited. We can left, right and center align as well as justify.
 
@@ -301,7 +303,7 @@ h1 {
 }
 ```
 
-## Spacing
+### Spacing
 
 We can use letter-spacing, word-spacing and line-height. We can use different units such as px
 
@@ -318,7 +320,7 @@ p {
 }
 ```
 
-## Custom Fonts
+### Custom Fonts
 
 We can use google fonts to find and import custom fonts. These fonts can be downloaded by including links to them in the html head or the css style sheet. We will find suggested font stacks to use with them, too.
 
@@ -328,7 +330,7 @@ h2 {
 }
 ```
 
-## Text Shadow
+### Text Shadow
 
 We can add shadow effects with the text-shadow property. There are several values it can take and they need to be specified in one of the correct ways which are documented on the mozilla development web-page.
 
@@ -346,7 +348,7 @@ h2 {
 }
 ```
 
-## Text Decoration
+### Text Decoration
 
 The text-decoration property is a shorthand way to cover line, color, style and thickness. We can specify individual properties or we can just use text-decoration.
 
@@ -368,7 +370,7 @@ a {
 }
 ```
 
-## Font Shorthand
+### Font Shorthand
 
 We can use the font shorthand property to combine font styles. It can get complicated so it makes sense to just use it to set the weight size and family stack.
 
@@ -378,7 +380,7 @@ p {
 }
 ```
 
-# Id and Class Selectors
+## Id and Class Selectors
 
 We can give elements a unique id. There should only be one of each id in a document as it is meant to be unique. We can then style that one specific element using the id selector in CSS.
 
@@ -408,7 +410,7 @@ If we have lots of elements which we want to style in the same way but we do not
 }
 ```
 
-# Styling Lists
+## Styling Lists
 
 We can specify the marker types using the list-style-type property. We can specify default markers as values such as disc and circle, or we can specify emojis using their number or custom made markers.
 
@@ -438,7 +440,7 @@ If we are styling an ordered list, we can specify list-value-type values such as
 }
 ```
 
-# Styling Links
+## Styling Links
 
 We can use the :visited pseudoclass with the anchor element to syle visited links differently to ones which have not been visited.
 
@@ -462,7 +464,7 @@ a:hover {
 }
 ```
 
-# The Universal Selector
+## The Universal Selector
 
 The * is the universal selector in that it selects all the elements in a document. This can be used to reset default styles so each user's browser renders the content in the same way.
 
@@ -473,7 +475,7 @@ The * is the universal selector in that it selects all the elements in a documen
 }
 ```
 
-# Attribute Selectors
+## Attribute Selectors
 
 We can select elements based on the values of their attributes using the attribute selector.
 
@@ -510,7 +512,7 @@ a[href$=".com"] {
 }
 ```
 
-# Grouping Selectors
+## Grouping Selectors
 
 We can group selectors together using ,
 
@@ -544,7 +546,7 @@ h6,
 }
 ```
 
-# The Descendant Combinator
+## The Descendant Combinator
 
 We can use a space to specify that we want to select descendants (children, grand-children and so on). These can be of elements, classes, ids etc
 
@@ -560,7 +562,7 @@ We might, for example, want to select spans which are descendents of a specific 
 }
 ```
 
-# Child Combinator
+## Child Combinator
 
 This is like the descendant combinator but it only selects direct children not grand-children etc.
 
@@ -575,7 +577,7 @@ li > span {
 }
 ```
 
-# The Compound Selector
+## The Compound Selector
 
 We can select specific elements belonging to a specific class using . notation - we could do this with ids but it makes no sense as ids are already unique.
 
@@ -589,3 +591,45 @@ h3.special {
     color: gold
 }
 ```
+
+## The Box Model
+
+The idea here is that every element in the browser is a box and we can control different properties relating to these boxes.
+
+The general properties which we can control are:
+
+- Width
+- Height
+- Padding
+- Margin
+- Border
+
+## Borders
+
+We can change the color, width and style of borders. We can apply different values to properties on each border (top, right, bottom and left).
+
+```css
+h1 {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid
+}
+```
+
+```css
+h2 {
+    border-top-color: red;
+    border-right-color: orange;
+    border-bottom-color: yellow;
+    border-left-color: green
+}
+```
+
+We can also combine property values into one line.
+
+```css
+h3 {
+    border: 2px solid black
+}
+```
+
